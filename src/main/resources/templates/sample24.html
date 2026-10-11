@@ -9,6 +9,18 @@
 <body>
   <h1>Hello POST!</h1>
   簡単な電卓Webアプリを動かしてみよう！
+  <!--form actionが処理を渡す先を示す
+    input nameがパラメータ名を表している
+    この場合，kakeru1,kakeru2の2つの変数が/sample25にpostメソッドで渡される-->
+  <form action="/sample25" method="post">
+    <input type="number" name="kakeru1" />×
+    <input type="number" name="kakeru2" />
+    <input type="submit" value="計算"><input type="reset" value="リセット">
+  </form>
+  <!--th:ifはkakeruResultが返ってきたとき(nullでないとき)だけdivを表示する-->
+  <div th:if="${kakeruResult}">
+    結果：[[${kakeruResult}]]
+  </div>
 </body>
 
 </html>
