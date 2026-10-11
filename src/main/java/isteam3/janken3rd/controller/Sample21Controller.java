@@ -24,6 +24,14 @@ public class Sample21Controller {
   }
 
   /**
+   * sample24というGETリクエストがあったら sample24()を呼び出し，sample24.htmlを返す
+   */
+  @GetMapping("/sample24")
+  public String sample24() {
+    return "sample24.html";
+  }
+
+  /**
    * パスパラメータ2つをGETで受け付ける 1つ目の変数をparam1という名前で，2つ目の変数をparam2という名前で受け取る
    * GETで受け取った2つの変数とsample22()の引数の名前が同じなため， 引数の前に @PathVariable と付けるだけで，パスパラメータの値を
    * javaで処理できるようになる ModelMapはthymeleafに渡すためのMapと呼ばれるデータ構造を持つ変数
